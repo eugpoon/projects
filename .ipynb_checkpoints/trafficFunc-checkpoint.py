@@ -2,10 +2,11 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 from matplotlib import pyplot as plt
-from plotly import graph_objs as go
+from plotly import express as px, graph_objs as go, io as pio
 import json
 from sklearn.linear_model import *
 from sklearn.model_selection import *
+pio.renderers.default = 'notebook'
 
 def plotDist(df, col, title, x):
     fig, axs = plt.subplots(ncols=2, figsize=(10, 5))
